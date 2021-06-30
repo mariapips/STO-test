@@ -50,6 +50,17 @@ aptitude -y purge expect
 
 service mysql restart
 
+echo "moving server file, php.ini and pool.d"
+chmod 777 /vagrant/
+cp /vagrant/server /etc/nginx/sites-available/server
+ln -s /etc/nginx/sites-available/server /etc/nginx/sites-enabled/server
+rm -rf /etc/php/7.0/fpm/php.ini
+cp /vagrant/php.ini /etc/php/7.0/fpm/php.ini
+rm -rf /etc/php/7.0/fpm/pool.d/www.conf
+cp /vagrant/www.conf /etc/php/7.0/fpm/pool.d/www.conf
+
+service nginx reload
+
 echo "Installing xdebug"
 apt-get install php-xdebug
 xdebug=$(cat <<EOF
@@ -63,3 +74,5 @@ xdebug.max_nesting_level=1000
 EOF
 )
 echo "${xdebug}" > /etc/php/7.0/fpm/conf.d/20-xdebug.ini 
+
+service php7.0-fpm restart
