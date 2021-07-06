@@ -1,0 +1,72 @@
+{
+  "routes": [
+    {
+      "route":"",
+        "controller": "home",
+        "actions": ["show"]
+
+    },
+    {
+      "route":"groups",
+        "controller": "groups",
+        "actions": ["show"]
+
+    },
+    {
+      "route":"directions",
+        "controller": "directions",
+        "actions": ["show"]
+
+    },
+    {
+      "route":"party",
+        "controller": "party",
+        "actions": ["show"]
+
+    },
+    {
+      "route":"application",
+        "controller": "application",
+        "actions": ["show",
+        "register"]
+
+    },
+    {
+      "route":"authorization",
+        "controller": "authorization",
+        "actions": ["show",
+          "auth"]
+      },
+    {
+      "route":"registration",
+      "controller": "registration",
+      "actions": ["show",
+        "register"] },
+    {
+      "route":"student",
+      "controller": "registration",
+      "actions": ["show",
+        "subscribe"]
+
+    },
+    {
+      "route":"teacher",
+      "controller": "registration",
+      "actions": ["show",
+        "approve",
+        "add"]
+
+    },
+
+    {
+      "route":"calendar",
+      "controller": "calendar",
+      "actions": ["show",
+        "student",
+        "teacher",
+        "subscribe",
+        "add"] }
+
+  ]
+
+}
