@@ -1,8 +1,9 @@
 <?php
 
-use framework\core\Router;
+require_once '../framework/core/Framework.php';
+use framework\core\Framework;
 
 echo "hello sto!";
-$router = new Router;
-$router->parse_request();
 
+$run = new Framework();
+$run->run();

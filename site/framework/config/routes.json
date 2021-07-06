@@ -1,56 +1,62 @@
 {
   "routes": [
     {
-      "route":"",
+      "route":"/",
         "controller": "home",
         "actions": ["show"]
 
     },
     {
-      "route":"groups",
+      "route":"/home",
+      "controller": "home",
+      "actions": ["show"]
+
+    },
+    {
+      "route":"/groups",
         "controller": "groups",
         "actions": ["show"]
 
     },
     {
-      "route":"directions",
+      "route":"/directions",
         "controller": "directions",
         "actions": ["show"]
 
     },
     {
-      "route":"party",
+      "route":"/party",
         "controller": "party",
         "actions": ["show"]
 
     },
     {
-      "route":"application",
+      "route":"/application",
         "controller": "application",
         "actions": ["show",
         "register"]
 
     },
     {
-      "route":"authorization",
+      "route":"/authorization",
         "controller": "authorization",
         "actions": ["show",
           "auth"]
       },
     {
-      "route":"registration",
+      "route":"/registration",
       "controller": "registration",
       "actions": ["show",
         "register"] },
     {
-      "route":"student",
+      "route":"/student",
       "controller": "registration",
       "actions": ["show",
         "subscribe"]
 
     },
     {
-      "route":"teacher",
+      "route":"/teacher",
       "controller": "registration",
       "actions": ["show",
         "approve",
@@ -59,7 +65,7 @@
     },
 
     {
-      "route":"calendar",
+      "route":"/calendar",
       "controller": "calendar",
       "actions": ["show",
         "student",

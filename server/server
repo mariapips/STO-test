@@ -33,7 +33,7 @@ server {
 	#
 	# include snippets/snakeoil.conf;
 
-	root /var/sto/;
+	root /var/sto/public;
 
 	# Add index.php to the list if you are using PHP
 	index index.php index.html index.htm index.nginx-debian.html;
@@ -51,8 +51,8 @@ server {
 		include /etc/nginx/fastcgi_params;
 		fastcgi_index index.php;
 		fastcgi_split_path_info  ^(.+\.php)(.*)$;
-		fastcgi_param SCRIPT_FILENAME /var/sto$fastcgi_script_name;
-		fastcgi_param PATH_TRANSLATED /var/sto$fastcgi_script_name;
+		fastcgi_param SCRIPT_FILENAME /var/sto/public$fastcgi_script_name;
+		fastcgi_param PATH_TRANSLATED /var/sto/public$fastcgi_script_name;
 		# With php7.0-fpm:
 		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
 	}

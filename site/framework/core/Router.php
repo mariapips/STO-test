@@ -3,20 +3,26 @@
     namespace framework\core;
 class Router
 {
+
     /**
      * Парсер запроса
      *
      * @return array $routes
      */
     public function parse_request()
-    {   $route[] = self::parse_json();
+    {
+        $route[] = self::parse_json();
+        $controller = new Controller();
         for ($i = 0; $i < count($route); $i++) {
-            if (preg_match('/^' . $route[$i]['route'] . '$/', $_SERVER['REQUEST_URI'])){
-                $controller = new Controller();
-                $controller->callController($route[$i]['controller']);
+            if (preg_match('/^' . $route[0][$i]['route'] . '$/', $_SERVER['REQUEST_URI'])) {
+                $controller->callController($route[0][$i]['controller']);
 
             }
+            else {
+                $controller->callController('error');
+            }
         }
+        return;
     }
 
         /**
@@ -24,9 +30,9 @@ class Router
          *
          * @return array $routes
          */
-    public static function parse_json()
+    public static function parse_json(): array
     {
-        $file = '../config/routes.json';
+        $file = '../framework/config/routes.json';
         $json = file_get_contents($file);
         $obj = json_decode($json, true);
         var_dump($obj);
