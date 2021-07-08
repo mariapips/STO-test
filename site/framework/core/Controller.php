@@ -5,9 +5,10 @@ namespace framework\core;
 class Controller
 {
 
-    public function callController($name){
+    public function callController($name, $action)
+    {
         //TODO: call $name_controller.php
 
-        echo $name;
+        echo $name . '' . $action;
     }
 }

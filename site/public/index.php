@@ -1,9 +1,8 @@
 <?php
 
-require_once '../framework/core/Framework.php';
+
+error_reporting(E_ALL);
 use framework\core\Framework;
 
-echo "hello sto!";
-
-$run = new Framework();
-$run->run();
+require "../framework/core/Framework.php";
+Framework::run();

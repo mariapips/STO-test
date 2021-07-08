@@ -1,78 +1,91 @@
 {
   "routes": [
     {
-      "route":"/",
-        "controller": "home",
-        "actions": ["show"]
-
-    },
-    {
-      "route":"/home",
+      "route": "",
       "controller": "home",
-      "actions": ["show"]
-
+      "actions": [
+        "show"
+      ]
     },
     {
-      "route":"/groups",
-        "controller": "groups",
-        "actions": ["show"]
-
+      "route": "home",
+      "controller": "home",
+      "actions": [
+        "show"
+      ]
     },
     {
-      "route":"/directions",
-        "controller": "directions",
-        "actions": ["show"]
-
+      "route": "groups",
+      "controller": "groups",
+      "actions": [
+        "show"
+      ]
     },
     {
-      "route":"/party",
-        "controller": "party",
-        "actions": ["show"]
-
+      "route": "directions",
+      "controller": "directions",
+      "actions": [
+        "show"
+      ]
     },
     {
-      "route":"/application",
-        "controller": "application",
-        "actions": ["show",
-        "register"]
-
+      "route": "party",
+      "controller": "party",
+      "actions": [
+        "show"
+      ]
     },
     {
-      "route":"/authorization",
-        "controller": "authorization",
-        "actions": ["show",
-          "auth"]
-      },
+      "route": "application",
+      "controller": "application",
+      "actions": [
+        "show",
+        "register"
+      ]
+    },
     {
-      "route":"/registration",
+      "route": "authorization",
+      "controller": "authorization",
+      "actions": [
+        "show",
+        "auth"
+      ]
+    },
+    {
+      "route": "registration",
       "controller": "registration",
-      "actions": ["show",
-        "register"] },
-    {
-      "route":"/student",
-      "controller": "registration",
-      "actions": ["show",
-        "subscribe"]
-
+      "actions": [
+        "show",
+        "register"
+      ]
     },
     {
-      "route":"/teacher",
+      "route": "student",
       "controller": "registration",
-      "actions": ["show",
+      "actions": [
+        "show",
+        "subscribe"
+      ]
+    },
+    {
+      "route": "teacher",
+      "controller": "registration",
+      "actions": [
+        "show",
         "approve",
-        "add"]
-
+        "add"
+      ]
     },
-
     {
-      "route":"/calendar",
+      "route": "calendar",
       "controller": "calendar",
-      "actions": ["show",
+      "actions": [
+        "show",
         "student",
         "teacher",
         "subscribe",
-        "add"] }
-
+        "add"
+      ]
+    }
   ]
-
 }
