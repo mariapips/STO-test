@@ -13,6 +13,11 @@ class Router
         $url_request = explode("/", $request, 3);
         $url = $url_request[1];
         $action = $url_request[2];
+//        if ($url == 'public'){
+//            if(file_exists($request)){
+//                return $request;
+//            }
+//        };
         $routes_array = $this->allRoutes($routes_json);
         foreach ($routes_json[0] as $value) {
             if ($this->isMatch($value['route'], $url)) {
@@ -20,7 +25,15 @@ class Router
                 break;
             } elseif (in_array($url, $routes_array)) {
                 continue;
-            } else {
+            }
+            elseif ($url == 'public'){
+                if(file_exists($action)){
+                    include '/../..'.$request;
+                    break;
+                }
+                else echo 'error!!!';
+            }
+            else {
                 http_response_code(404);
                 $controller->callController('error', 'show');
                 break;

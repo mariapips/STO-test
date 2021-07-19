@@ -1,0 +1,1 @@
+How to set active tab in menu <li class="<?= ($activePage == 'groups') ? 'active':''; ?>"><a href="/groups">Groups</a></li>
