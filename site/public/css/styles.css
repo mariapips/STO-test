@@ -1,0 +1,45 @@
+
+.site-header
+{
+    position: absolute;
+    width: 100vw;
+    background: #000000;
+
+}
+.site-navigation
+{
+    position: absolute;
+    width: 1440px;
+    height: 83px;
+    margin: 150px;
+
+    background: #000000;
+}
+
+ul.menu li
+{   display:inline;
+    font-family: Noto Sans, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+}
+
+
+body {
+    
+    background: #000000;
+}
+
+.footer
+{
+    position: absolute;
+    width: 1440px;
+    height: 95px;
+    left: 0;
+    top: 4422px;
+
+}

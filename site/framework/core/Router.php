@@ -28,7 +28,7 @@ class Router
             }
             elseif ($url == 'public'){
                 if(file_exists($action)){
-                    include '/../..'.$request;
+                    include (__DIR__.'/../..'.$request);
                     break;
                 }
                 else echo 'error!!!';

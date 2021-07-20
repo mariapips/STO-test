@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link type="image/png" sizes="16x16" rel="icon" href="../../../../public/img/logo.jpg">
+    <link rel="stylesheet" href="../../../../public/css/styles.css">
     <title> <?php
         echo $title ?> </title>
 </head>
