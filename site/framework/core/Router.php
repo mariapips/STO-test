@@ -13,11 +13,6 @@ class Router
         $url_request = explode("/", $request, 3);
         $url = $url_request[1];
         $action = $url_request[2];
-//        if ($url == 'public'){
-//            if(file_exists($request)){
-//                return $request;
-//            }
-//        };
         $routes_array = $this->allRoutes($routes_json);
         foreach ($routes_json[0] as $value) {
             if ($this->isMatch($value['route'], $url)) {

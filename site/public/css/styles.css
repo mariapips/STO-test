@@ -1,18 +1,20 @@
 
 .site-header
 {
+    text-align: justify;
     position: absolute;
     width: 100vw;
     background: #000000;
+    display: grid;
+    place-items: center;
 
 }
 .site-navigation
 {
     position: absolute;
-    width: 1440px;
+    width: 100vw;
     height: 83px;
     margin: 150px;
-
     background: #000000;
 }
 
@@ -24,13 +26,12 @@ ul.menu li
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.06em;
-
     color: #FFFFFF;
 }
 
 
 body {
-    
+
     background: #000000;
 }
 
@@ -38,8 +39,13 @@ body {
 {
     position: absolute;
     width: 1440px;
-    height: 95px;
+    height: 100vh;
     left: 0;
-    top: 4422px;
+    top: 100vh;
 
+}
+.footer-list li{
+    display:inline;
+    height: 100px;
+    width: 30%;
 }
